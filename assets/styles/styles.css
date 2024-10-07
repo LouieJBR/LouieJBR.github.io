@@ -8,32 +8,26 @@
 
 body {
     line-height: 1.6;
-    /* background-color: #D2B48C; Soft Tan */
-    background: linear-gradient(to bottom, #F0EDE5, #D2B48C);
-    /* Soft tan gradient */
-    color: #333333;
-    /* Deep Charcoal */
+    background-color: #F8F8F8; /* Light Off-White */
+    color: #000000; /* Black */
 }
 
 header {
-    background-color: #556B2F;
-    /*Matte Forest Green */
-    color: #F0EDE5;
-    /* Off-White */
+    background-color: #34495E; /* Dark Slate Blue */
+    color: #F8F8F8; /* Off-White */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* Increased shadow for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 header h1 {
     margin: 0;
+    font-weight: bold; /* Bold for header */
 }
-
 
 nav ul {
     list-style: none;
@@ -41,14 +35,10 @@ nav ul {
     gap: 15px;
 }
 
-nav ul li {
-    display: inline;
-}
-
 nav ul li a {
-    color: #F0EDE5;
-    /* Off-White */
+    color: #F8F8F8; /* Off-White */
     text-decoration: none;
+    font-weight: bold; /* Bold links */
 }
 
 section {
@@ -59,14 +49,9 @@ h2 {
     margin-bottom: 15px;
     display: flex;
     justify-content: center;
-    color: #556B2F;
-    /* Matte Forest Green */
-    font-weight: 700;
-    /* Bold */
-    font-size: 2rem;
-    /* Larger font size */
-    letter-spacing: 0.5px;
-    /* Increased letter spacing */
+    color: #34495E; /* Dark Slate Blue */
+    font-weight: bold; /* Bold for headings */
+    font-size: 2rem; /* Larger font size */
 }
 
 .cards {
@@ -76,33 +61,28 @@ h2 {
 }
 
 .card {
-    background-color: #FFDAB9;
-    /* Light Sky Blue */
+    background-color: #FFFFFF; /* White */
     padding: 20px;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
     width: 30%;
-    color: #333333;
-    /* Deep Charcoal */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* Increased shadow for hover effect */
-}
-
-hr {
-    color: #8B4513;
-    margin-bottom: 20px;
+    color: #000000; /* Black */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* Increased shadow for hover effect */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .card h3 {
     margin-bottom: 10px;
-    color: #2F3E46;
-    /* Dark muted green */
+    color: #34495E; /* Dark Slate Blue */
+}
+
+hr {
+    color: #8B4513; /* Muted Brown */
+    margin-bottom: 20px;
 }
 
 .links {
@@ -122,8 +102,7 @@ hr {
 
 .category h3 {
     margin-bottom: 10px;
-    color: #556B2F;
-    /* Matte Forest Green */
+    color: #34495E; /* Dark Slate Blue */
 }
 
 .contact-links {
@@ -133,21 +112,17 @@ hr {
 }
 
 .button {
-    background-color: #D2691E;
-    /* Clay Orange */
-    color: #F0EDE5;
-    /* Off-White */
-    padding: 12px 25px;
-    /* Increased padding for larger buttons */
+    background-color: #34495E; /* Dark Slate Blue */
+    color: #F8F8F8; /* Off-White */
+    padding: 12px 25px; /* Larger buttons */
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Added shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
-    transform: translateY(-2px);
-    /* Subtle lift on hover */
+    background-color: #2C3E50; /* Darker Slate Blue */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 .skills {
@@ -162,48 +137,35 @@ hr {
 }
 
 .skill {
-    background-color: #eaeaea;
-    /* Light gray (unchanged for subtlety) */
+    background-color: #F0F0F0; /* Light Gray */
     padding: 10px 15px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
     transition: all 0.3s ease-in-out;
 }
 
 .skill:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Deeper shadow */
 }
 
 footer {
-    background-color: #8B4513;
-    /* Muted Brown */
-    color: #F0EDE5;
-    /* Off-White */
+    background-color: #34495E; /* Dark Slate Blue */
+    color: #F8F8F8; /* Off-White */
     text-align: center;
     padding: 10px;
     margin-top: 40px;
     border-radius: 10px 10px 0 0;
-    font-size: 0.9rem;
-    /* Smaller footer font */
 }
 
 p {
-    line-height: 1.7;
-    /* Increased line height for better readability */
+    line-height: 1.7; /* Improved readability */
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
     .cards {
-        flex-direction: column;
-        /* Stack cards on smaller screens */
-        align-items: center;
-        /* Center align cards */
-    }
-
-    .book-cover {
-        width: 90%;
-        /* Make book covers full width on small screens */
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center align cards */
     }
 }
