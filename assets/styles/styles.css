@@ -62,17 +62,34 @@ header {
     top: 0;
     z-index: 1000;
     background: rgba(52, 73, 94, 0.9);
-    /* Slight transparency for sticky header */
     color: #F8F8F8;
-    /* Off-White */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
     transition: background 0.3s;
 }
+
+/* Show only the name on mobile */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        /* Hide the navbar */
+    }
+
+    .name {
+        display: block;
+        /* Show only the name */
+        font-size: 2rem;
+        /* Adjust the size as needed */
+        text-align: center;
+        /* Center the name */
+        width: 100%;
+        /* Full width */
+    }
+}
+
 
 header h1 {
     margin: 0;
