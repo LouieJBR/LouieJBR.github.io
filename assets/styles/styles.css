@@ -6,34 +6,79 @@
     box-sizing: border-box;
 }
 
-body {
-    line-height: 1.6;
-    /* background-color: #D2B48C; Soft Tan */
-    background: linear-gradient(to bottom, #F0EDE5, #D2B48C);
-    /* Soft tan gradient */
-    color: #333333;
-    /* Deep Charcoal */
+h1,
+h2,
+h3 {
+    margin: 0;
+    /* Remove default margin */
 }
 
+body {
+    line-height: 1.6;
+    background-color: #F8F8F8;
+    /* Light Off-White */
+    color: #000000;
+    /* Black */
+}
+
+/* Hero Section */
+.hero {
+    background: url('path_to_your_image.jpg') no-repeat center center/cover;
+    height: 100%;
+    /* Height of hero section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    /* Larger font size for hero */
+    margin-bottom: 10px;
+}
+
+.about-me {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background for better readability */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.about-me h2 {
+    margin-bottom: 15px;
+    color: #F8F8F8;
+    /* Off-White */
+}
+
+/* Header */
 header {
-    background-color: #556B2F;
-    /*Matte Forest Green */
-    color: #F0EDE5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(52, 73, 94, 0.9);
+    /* Slight transparency for sticky header */
+    color: #F8F8F8;
     /* Off-White */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* Increased shadow for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    transition: background 0.3s;
 }
 
 header h1 {
     margin: 0;
+    font-weight: bold;
+    /* Bold for header */
 }
-
 
 nav ul {
     list-style: none;
@@ -41,32 +86,38 @@ nav ul {
     gap: 15px;
 }
 
-nav ul li {
-    display: inline;
-}
-
 nav ul li a {
-    color: #F0EDE5;
+    color: #F8F8F8;
     /* Off-White */
     text-decoration: none;
+    font-weight: bold;
+    /* Bold links */
 }
 
+nav ul li a:hover {
+    color: #2C3E50;
+    /* Change color on hover */
+    text-decoration: underline;
+    /* Add underline effect */
+}
+
+/* Section Styles */
 section {
-    padding: 20px;
+    padding: 10px 20px;
+    margin-top: 0;
+    /* Remove margin if any */
 }
 
 h2 {
     margin-bottom: 15px;
     display: flex;
     justify-content: center;
-    color: #556B2F;
-    /* Matte Forest Green */
-    font-weight: 700;
-    /* Bold */
+    color: #34495E;
+    /* Dark Slate Blue */
+    font-weight: bold;
+    /* Bold for headings */
     font-size: 2rem;
     /* Larger font size */
-    letter-spacing: 0.5px;
-    /* Increased letter spacing */
 }
 
 .cards {
@@ -76,33 +127,39 @@ h2 {
 }
 
 .card {
-    background-color: #FFDAB9;
-    /* Light Sky Blue */
+    background-color: #FFFFFF;
+    /* White */
     padding: 20px;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
     width: 30%;
-    color: #333333;
-    /* Deep Charcoal */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* Increased shadow for hover effect */
+    color: #000000;
+    /* Black */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Light shadow */
 }
 
-hr {
-    color: #8B4513;
-    margin-bottom: 20px;
+.projects .card {
+    background-color: #D3D3D3
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* Increased shadow for hover effect */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow on hover */
 }
 
 .card h3 {
     margin-bottom: 10px;
-    color: #2F3E46;
-    /* Dark muted green */
+    color: #34495E;
+    /* Dark Slate Blue */
+}
+
+hr {
+    color: #34495E;
+    /* Muted Brown */
+    margin-bottom: 20px;
 }
 
 .links {
@@ -118,36 +175,39 @@ hr {
 
 .link-categories .category {
     width: 45%;
+    background-color: #FFFFFF;
+    /* White */
+    padding: 15px;
+    border-radius: 8px;
 }
 
 .category h3 {
     margin-bottom: 10px;
-    color: #556B2F;
-    /* Matte Forest Green */
+    color: #34495E;
+    /* Dark Slate Blue */
 }
 
+/* Contact Links */
 .contact-links {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .button {
-    background-color: #D2691E;
-    /* Clay Orange */
-    color: #F0EDE5;
-    /* Off-White */
-    padding: 12px 25px;
-    /* Increased padding for larger buttons */
+    background-color: #2980B9;
+    /* Button color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Added shadow for depth */
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s;
 }
 
 .button:hover {
-    transform: translateY(-2px);
-    /* Subtle lift on hover */
+    background-color: #1F5A8B;
+    /* Darker on hover */
 }
 
 .skills {
@@ -155,55 +215,66 @@ hr {
 }
 
 .skill-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    /* Responsive grid */
     gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+    /* Space between the pills */
+    justify-items: center;
+    /* Center align items in the grid */
 }
 
-.skill {
-    background-color: #eaeaea;
-    /* Light gray (unchanged for subtlety) */
+.skill-pill {
+    background-color: #D3D3D3;
+    /* Pill background color */
+    color: 34495E;
+    /* Text color */
     padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    /* Padding for the pill */
+    border-radius: 20px;
+    /* Pill shape */
+    text-align: center;
+    /* Center text */
+    font-weight: bold;
+    /* Bold text */
+    transition: background 0.3s;
+    /* Transition for hover effect */
+    cursor: pointer;
+    /* Pointer cursor on hover */
 }
 
-.skill:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.skill-pill:hover {
+    background-color: #1F5A8B;
+    /* Darker color on hover */
 }
 
+/* Footer */
 footer {
-    background-color: #8B4513;
-    /* Muted Brown */
-    color: #F0EDE5;
+    margin-top: 15px;
+    background-color: #34495E;
+    /* Dark Slate Blue */
+    color: #F8F8F8;
     /* Off-White */
     text-align: center;
-    padding: 10px;
-    margin-top: 40px;
-    border-radius: 10px 10px 0 0;
-    font-size: 0.9rem;
-    /* Smaller footer font */
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-p {
-    line-height: 1.7;
-    /* Increased line height for better readability */
-}
-
-
+/* Media Queries */
 @media (max-width: 768px) {
     .cards {
         flex-direction: column;
-        /* Stack cards on smaller screens */
         align-items: center;
-        /* Center align cards */
     }
 
-    .book-cover {
+    .card {
+        width: 80%;
+    }
+
+    .skill {
         width: 90%;
-        /* Make book covers full width on small screens */
+        /* Adjust skill cards for mobile */
     }
 }
