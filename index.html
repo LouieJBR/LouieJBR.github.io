@@ -9,14 +9,42 @@
         href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;500;700&family=Montserrat:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/styles.css">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YWRQ4RW2EN"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-YWRQ4RW2EN');
+        gtag('config', 'G-YWRQ4RW2EN');
+
+        // Event Tracking: Scroll depth tracking
+        window.addEventListener('scroll', function() {
+            const scrollPercentage = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercentage > 25) {
+                gtag('event', 'scroll', { 'event_category': 'Engagement', 'event_label': 'Scrolled 25%' });
+            }
+            if (scrollPercentage > 50) {
+                gtag('event', 'scroll', { 'event_category': 'Engagement', 'event_label': 'Scrolled 50%' });
+            }
+            if (scrollPercentage > 75) {
+                gtag('event', 'scroll', { 'event_category': 'Engagement', 'event_label': 'Scrolled 75%' });
+            }
+            if (scrollPercentage > 90) {
+                gtag('event', 'scroll', { 'event_category': 'Engagement', 'event_label': 'Scrolled 90%' });
+            }
+        });
+
+        // Event Tracking: Time spent on the page (30 sec, 60 sec)
+        setTimeout(function() {
+            gtag('event', 'time_on_page', { 'event_category': 'Engagement', 'event_label': 'Spent 30 seconds' });
+        }, 30000); // 30 seconds
+
+        setTimeout(function() {
+            gtag('event', 'time_on_page', { 'event_category': 'Engagement', 'event_label': 'Spent 60 seconds' });
+        }, 60000); // 60 seconds
+
     </script>
 </head>
 
@@ -33,6 +61,7 @@
             </ul>
         </nav>
     </header>
+
     <section class="hero" id="hero">
         <div class="about-me">
             <h2>About Me</h2>
@@ -52,6 +81,7 @@
             </div>
         </div>
     </section>
+
     <section class="projects">
         <h2 id="projects">Projects</h2>
         <div class="cards">
@@ -60,23 +90,21 @@
                 <h5>Angular, Spotify API</h5>
                 <hr>
                 <p>A custom timer application integrated with Spotify API.</p>
-                <a href="https://github.com/LouieJBR/spotify-timer">Learn more</a>
+                <a href="https://github.com/LouieJBR/spotify-timer" onclick="gtag('event', 'click', { 'event_category': 'Projects', 'event_label': 'Spotify Timer' });">Learn more</a>
             </div>
             <div class="card">
                 <h3>Sustainability Analysis</h3>
                 <h5>Java Spring, Angular, MySQL</h5>
                 <hr>
-                <p>A data-driven project analyzing environmental sustainability factors. </p>
-                <p>This project involves building a tool that analyzes the energy consumption of code (both frontend and backend) and provides actionable feedback for optimization.</p>
-                <a href="https://github.com/LouieJBR/ccgc-sustainability-analysis">Learn more</a>
+                <p>A data-driven project analyzing environmental sustainability factors.</p>
+                <a href="https://github.com/LouieJBR/ccgc-sustainability-analysis" onclick="gtag('event', 'click', { 'event_category': 'Projects', 'event_label': 'Sustainability Analysis' });">Learn more</a>
             </div>
             <div class="card">
                 <h3>Caffine for Windows</h3>
                 <h5>C#</h5>
                 <hr>
                 <p>CaffineApp is a lightweight Windows desktop application designed to prevent your screen from timing out.</p>
-                <p>Caffine sits in the system tray and allows you to easily control your display settings. Users can choose to keep the screen active indefinitely, for 30 minutes, or for 1 hour.</p>
-                <a href="https://github.com/LouieJBR/caffine-for-windows">Learn more</a>
+                <a href="https://github.com/LouieJBR/caffine-for-windows" onclick="gtag('event', 'click', { 'event_category': 'Projects', 'event_label': 'Caffine for Windows' });">Learn more</a>
             </div>
         </div>
     </section>
@@ -100,11 +128,12 @@
         </div>
     </section>
     <hr>
+
     <section class="contact">
         <h2 id="contact">Contact & Links</h2>
         <div class="contact-links">
-            <a href="https://github.com/LouieJBR" class="button">GitHub</a>
-            <a href="https://www.linkedin.com/in/louie-brown-44358519a/" class="button">LinkedIn</a>
+            <a href="https://github.com/LouieJBR" class="button" onclick="gtag('event', 'click', { 'event_category': 'Social', 'event_label': 'GitHub' });">GitHub</a>
+            <a href="https://www.linkedin.com/in/louie-brown-44358519a/" class="button" onclick="gtag('event', 'click', { 'event_category': 'Social', 'event_label': 'LinkedIn' });">LinkedIn</a>
         </div>
     </section>
 
@@ -129,7 +158,6 @@
     <footer>
         <p>&copy; 2025 Louie Brown. All rights reserved.</p>
     </footer>
-
 </body>
 
 </html>
